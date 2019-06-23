@@ -2,11 +2,84 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
       th:fragment="header">
 <header role="header">
+    <!-- 背景音乐 -->
+    <style>
+
+        .icon-music-outer{
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            position: fixed;
+            right: 5px;
+            /*top: 10px;*/
+            font-size: 25px;
+            color: #ffda51;
+            z-index: 100;
+            bottom:100px;
+        }
+
+        .forbid{
+            display: inline-block;
+            font-size: 25px;
+            width: 25px;
+            height: 25px;
+        }
+
+        .icon-forbidMusic{
+            display: inline-block;
+            font-size: 25px;
+            width: 25px;
+            height: 25px;
+            color: #d0f2fc;
+            z-index: 101;
+        }
+
+        audio{
+            position: absolute;
+            left: -300px;
+        }
+
+    </style>
+
+    <!--背景音乐控制-->
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" type="text/javascript"></script>
+    <!--<script>-->
+    <!--    var $music = $('.icon-music-outer');-->
+    <!--    var $forbid = $music.find('.forbid');-->
+    <!--    var audio = document.getElementById('bgMusic');-->
+    <!--    function audioAutoPlay(audio) {-->
+    <!--        document.addEventListener("WeixinJSBridgeReady", function () {-->
+    <!--            audio.play();-->
+    <!--        }, false);-->
+    <!--        document.addEventListener('YixinJSBridgeReady', function () {-->
+
+    <!--            audio.play();-->
+    <!--        }, false);-->
+
+    <!--    }-->
+    <!--    audioAutoPlay(audio);-->
+    <!--    $music.on('click', function () {-->
+    <!--        if ($forbid.hasClass('icon-music')) {-->
+    <!--            $forbid.removeClass('icon-music').addClass('icon-forbidMusic');-->
+    <!--        } else {-->
+    <!--            $forbid.removeClass('icon-forbidMusic').addClass('icon-music');-->
+    <!--        }-->
+
+    <!--        if (audio.paused) {-->
+    <!--            audio.play();-->
+    <!--            return-->
+    <!--        }-->
+    <!--        audio.pause();-->
+    <!--    });-->
+    <!--</script>-->
+
+
     <div class="container">
 
         <!-- logo -->
 
-        <h1> <a th:href="@{/}" title="avana LLC"><img th:src="@{http://img.winterchen.com/BF6AC5E5-C8D7-4841-B3ED-9D898586D5FF-9703-0000073B1BF8A7F8_tmp.PNG}" style="width: 66px;" title="avana LLC" alt="avana LLC"/></a> </h1>
+        <h1> <a th:href="@{/}" title="avana LLC"><img th:src="@{http://47.107.251.92:8080/images/logo.png}" style="width: 66px;" title="avana LLC" alt="avana LLC"/></a> </h1>
 
         <!-- logo -->
 
@@ -14,9 +87,9 @@
 
         <nav role="header-nav" class="navy">
             <ul>
-                <li th:class="${active == 'work' ? 'nav-active':''}"><a th:href="@{/}" title="Work">Work</a></li>
-                <li th:class="${active == 'about' ? 'nav-active':''}"><a  th:href="@{/about}" title="About">About</a></li>
-                <li th:class="${active == 'blog' ? 'nav-active':''}"><a th:href="@{/blog/index}" title="Blog">Blog</a></li>
+                <li th:class="${active == 'work' ? 'nav-active':''}"><a th:href="@{/}" title="Work">工作</a></li>
+                <li th:class="${active == 'about' ? 'nav-active':''}"><a  th:href="@{/about}" title="About">关于</a></li>
+                <li th:class="${active == 'blog' ? 'nav-active':''}"><a th:href="@{/blog/index}" title="Blog">博客</a></li>
             </ul>
         </nav>
 

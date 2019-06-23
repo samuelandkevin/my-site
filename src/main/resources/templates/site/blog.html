@@ -4,7 +4,11 @@
 <div th:replace="site/head::head(${commons.site_title()},${commons.google_site_verification()}, ${commons.baidu_site_verification()})"></div>
 
 <body>
-
+<i class="icon-music-outer">
+    <i class="forbid icon-music"></i> <!--控制音乐图标-->
+    <audio loop autoplay="autoplay" controls id="bgMusic" src="http://47.107.251.92:8080/music/Jay1.mp3">
+    </audio>
+</i>
 
 <!-- header -->
 
@@ -27,11 +31,11 @@
 
                 <header>
 
-                    <h2><span>Blog</span> write by luis</h2>
+                    <h2><span>Blog</span> write by 临海听风</h2>
 
                 </header>
 
-                <p>Some technical blogs and life logs about Java.</p>
+                <p>千里之行，始于足下</p>
 
             </article>
 
