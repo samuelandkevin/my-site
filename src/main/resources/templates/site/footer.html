@@ -50,7 +50,12 @@
             </th:block>
         </th:block>
     </ul>
-    <p class="copy-right">&copy; 2019 <th:block th:text="${title}"></th:block></p>
+    <p class="copy-right">&copy; 2019-2020 </a>
+        <th:block th:text="${title}"></th:block></p>
+    <p class="copy-right"> <a style="text-decoration: none;color:#9c9c9c" href="http://www.beian.miit.gov.cn/" target="_blank">  ICP证：粤ICP备19084692号</a>
+        <th:block th:text="${title}"></th:block></p>
+    <p class="copy-right"> <a style="text-decoration: none;color:#9c9c9c" href="http://www.beian.miit.gov.cn/" target="_blank">  网站备案号：粤ICP备19084692号-1</a>
+        <th:block th:text="${title}"></th:block></p>
     <th:block th:if="${record != null and record != ''}"><a class="copy-right" th:href="@{http://www.miitbeian.gov.cn/}" th:text="${record}"></a></th:block>
 </footer>
 
